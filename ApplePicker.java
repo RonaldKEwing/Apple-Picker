@@ -18,9 +18,14 @@ public class ApplePicker {
 
         String userString = myScanner.nextLine();
 
+        //Does not account for non integer convertable strings, who cares!
         int apples = Integer.parseInt(userString);
 
 
+        //All of this is very inefficient, but it works for now!
+
+        //TODO: Use a switch, but it doesnt really support this
+        // and the efficiency is about 20ns (nanoseconds) so its fine
         if(apples < 0) {
             System.out.println("Number does not exist, please dont be Autisti");
             return;
@@ -46,6 +51,7 @@ public class ApplePicker {
             System.out.println("Total Charge is: " + apples*3.5);
         }
 
+        //This is the end just incase it breaks you atleast get something!
         System.out.println("Goodbye!");
 
     }
